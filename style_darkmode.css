@@ -1,0 +1,59 @@
+.wrapper {
+    padding: 40px;
+    text-align: end;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    margin-left: 100px;
+    padding: 4px;
+    border-radius: 40px;
+}
+
+.toggle-bg {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 100%;
+    height: 100%;
+    background-color: #C0E6F6;
+    border-radius: 40px;
+    border: 4px solid #81C0D5;
+    transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.toggle-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
+    border-radius: 40px;
+    z-index: 2;
+    opacity: 0;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: 50px;
+    background-color: #fffee6;
+    border: 4px solid #fff5cc;
+    border-radius: 50%;
+    transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.toggle-input:checked~.toggle-switch {
+    margin-left: 0;
+    border-color: #DEE1C5;
+    background-color: #FFFDF2;
+}
+
+.toggle-input:checked~.toggle-bg {
+    background-color: #484848;
+    border-color: #202020;
+}

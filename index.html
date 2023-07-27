@@ -1,0 +1,51 @@
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style_darkmode.css">
+</head>
+
+<body id="fundo">
+    <div class="wrapper">
+        <div class="toggle">
+            <input class="toggle-input" type="checkbox" />
+            <div class="toggle-bg"></div>
+            <div class="toggle-switch"></div>
+        </div>
+    </div>
+
+    <h1>Jogo da Velha</h1>
+    <section class="game-container" id="tabuleiro">
+        <div class="row">
+            <div class="cell quina1" onclick="movimento(0, 0)"></div>
+            <div class="cell" onclick="movimento(0, 1)"></div>
+            <div class="cell quina2" onclick="movimento(0, 2)"></div>
+        </div>
+        <div class="row">
+            <div class="cell" onclick="movimento(1, 0)"></div>
+            <div class="cell" onclick="movimento(1, 1)"></div>
+            <div class="cell" onclick="movimento(1, 2)"></div>
+        </div>
+        <div class="row">
+            <div class="cell quina3" onclick="movimento(2, 0)"></div>
+            <div class="cell" onclick="movimento(2, 1)"></div>
+            <div class="cell quina4" onclick="movimento(2, 2)"></div>
+        </div>
+    </section>
+
+    <section class="modal" id="modal">
+        <div class="modal-content" id="tela_vitoria">
+            <h2 id="marcador">Vitória do jogador [<span id="winner"></span>]!</h2>
+            <button class="restart" onclick="resettabuleiro()">Reiniciar Jogo</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
