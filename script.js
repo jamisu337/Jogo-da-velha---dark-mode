@@ -16,7 +16,7 @@ function movimento(linha, coluna) {
                 document.getElementById('winner').innerHTML = jogador_atual;
         } else if (checkDraw()) {
                 modal.style.display = 'flex';
-                document.getElementById('marcador').innerHTML = "empate";
+                document.getElementById('marcador').innerHTML = "Empate";
         } else {
             jogador_atual = jogador_atual === 'X' ? 'O' : 'X';
         }
