@@ -10,7 +10,8 @@ function movimento(linha, coluna) {
     if (tabuleiro[linha][coluna] === '') {
         tabuleiro[linha][coluna] = jogador_atual; //vai receber X ou O
         document.getElementsByClassName('cell')[linha * 3 + coluna].innerText = jogador_atual;
-
+        document.getElementById('marcador').innerHTML = "Vitória do jogador [<span id="+"winner"+"></span>]!";
+        
         if (checkWin(jogador_atual)) {
                 modal.style.display = 'flex';   
                 document.getElementById('winner').innerHTML = jogador_atual;
